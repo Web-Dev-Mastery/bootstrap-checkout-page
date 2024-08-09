@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <h1 class="text-white my-4 text-center">Checkout</h1>
+        <form class="bg-white p-4 rounded shadow mx-auto max-w-md">
+            <fieldset>
+                <legend class="h5 mb-3">Billing Details</legend>
+
+                <div class="mb-4">
+                    <label for="fullName">Full Name</label>
+                    <input class="form-control" type="text" id="fullName" name="fullName">
+                </div>
+                <div class="mb-4">
+                    <label for="email">Email Address</label>
+                    <input class="form-control" type="email" id="email" name="email">
+                </div>
+            </fieldset>
+            <fieldset class="mb-4">
+                <legend class="h5 mb-3">Payment Method</legend>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment_method" id="credit_card" checked>
+                        <label for="credit_card" class="form-check-label">Credit Card</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment_method" id="paypal">
+                        <label for="paypal" class="form-check-label">Paypal</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment_method" id="stripe">
+                        <label for="stripe" class="form-check-label">Stripe</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend class="h5 mb-3">Card Details</legend>
+
+                <div class="mb-4">
+                    <label for="card_number">Card Number</label>
+                    <input class="form-control" type="text" id="card_number" name="card_number">
+                </div>
+                <div class="mb-4">
+                    <label for="card_expiry">Expiration Date</label>
+                    <input class="form-control" type="text" id="card_expiry" name="card_expiry">
+                </div>
+                <div class="mb-4">
+                    <label for="card_cvc">CVC</label>
+                    <input class="form-control" type="text" id="card_cvc" name="card_cvc">
+                </div>
+            </fieldset>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </div>
+        </form>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
